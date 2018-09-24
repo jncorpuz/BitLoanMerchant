@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HomeMenuActivity" />
+        <activity android:name=".NFC_Activity" />
+        <activity android:name=".SettingsA_Activity" />
+        <activity android:name=".SettingsB_Activity" />
+        <activity android:name=".SettingsC_Activity" />
+        <activity android:name=".SettingsD_Activity" />
+        <activity android:name=".SettingsMenuActivity" />
+        <activity android:name=".SignupA_Activity" />
+        <activity android:name=".SignupB_Activity" />
+        <activity android:name=".TransactionsActivity" />
     </application>
 
 </manifest>

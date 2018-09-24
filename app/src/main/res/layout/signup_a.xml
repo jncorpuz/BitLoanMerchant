@@ -20,12 +20,12 @@
         android:text="Already have an account?"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/txtLoginSU"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/cmdNextStepSU" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtLoginSU"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -33,14 +33,15 @@
         android:layout_marginRight="54dp"
         android:layout_marginTop="18dp"
         android:text="Log In."
+        android:onClick="LoginSU"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/cmdNextStepSU" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cmdNextStepSU"
         android:layout_width="220dp"
         android:layout_height="42dp"
         android:layout_marginEnd="54dp"
@@ -50,6 +51,7 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/button"
         android:text="Next Step >>"
+        android:onClick="NextStepSU"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,13 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-import retrofit2.Call;
+import org.w3c.dom.Text;
 
 public class LoginActivity extends AppCompatActivity
 {
     EditText username, password;
+    Button cmdLogin;
+    TextView txtSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -18,8 +22,10 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText) findViewById(R.id.editText);
-        password = (EditText) findViewById(R.id.editText2);
+        username = (EditText) findViewById(R.id.txtUsername);
+        password = (EditText) findViewById(R.id.txtPassword);
+        cmdLogin = (Button) findViewById(R.id.cmdLogin);
+        txtSignup = (TextView) findViewById(R.id.txtSignUp);
     }
 
     public void Login(View v)
@@ -40,6 +46,7 @@ public class LoginActivity extends AppCompatActivity
 
     public void SignUp(View v)
     {
-
+        Intent intent = new Intent(LoginActivity.this, SignupA_Activity.class);
+        startActivity(intent);
     }
 }
