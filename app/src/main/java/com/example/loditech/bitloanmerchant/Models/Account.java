@@ -32,7 +32,12 @@ public class Account
     @SerializedName("Role")
     public String Role;
 
-    public static Account account;
+    public static MerchantAccount account;
+
+    public Account()
+    {
+
+    }
 
     public Account(int ID, String username, String password, String firstName, String middleName, String lastName, String emailAddress, String address, String role )
     {
