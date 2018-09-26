@@ -5,34 +5,26 @@ import com.google.gson.annotations.SerializedName;
 
 public class Account
 {
-    @SerializedName("ID")
-    @Expose
+
     public int ID;
-    @SerializedName("Username")
-    @Expose
+
     public String Username;
-    @SerializedName("Password")
-    @Expose
+
     public String Password;
-    @SerializedName("FirstName")
-    @Expose
+
     public String FirstName;
-    @SerializedName("MiddleName")
-    @Expose
+
     public String MiddleName;
-    @SerializedName("LastName")
-    @Expose
+
     public String LastName;
-    @SerializedName("EmailAddress")
-    @Expose
+
     public String EmailAddress;
-    @SerializedName("Address")
-    @Expose
+
     public String Address;
-    @SerializedName("Role")
+
     public String Role;
 
-    public static MerchantAccount account;
+    public static Account account;
 
     public Account()
     {

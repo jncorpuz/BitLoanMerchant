@@ -9,7 +9,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.loditech.bitloanmerchant.Data.RetrofitClient;
+import com.example.loditech.bitloanmerchant.Models.Account;
 import com.example.loditech.bitloanmerchant.Models.MerchantAccount;
+import com.example.loditech.bitloanmerchant.Models.Wallet;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,7 +20,7 @@ import retrofit2.Response;
 public class SettingsB_Activity extends AppCompatActivity
 {
     EditText oldPassword, newPassword, confirmPassword;
-    TextView balance;
+    TextView lblBalance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -29,13 +31,15 @@ public class SettingsB_Activity extends AppCompatActivity
         oldPassword = (EditText) findViewById(R.id.txtOldPassword);
         newPassword = (EditText) findViewById(R.id.txtNewPassword);
         confirmPassword = (EditText) findViewById((R.id.txtConfirmPassword));
+        lblBalance = (TextView) findViewById(R.id.lblBalance);
+        lblBalance.setText(Double.toString(Wallet.wallet.getAmount()));
     }
 
     public void Update_onClick(View v)
     {
         if(Check())
         {
-            Call<Boolean> call = RetrofitClient.getInstance().getAPI().ChangePassword(MerchantAccount.account.getAccountID(), oldPassword.getText().toString(), newPassword.getText().toString());
+            Call<Boolean> call = RetrofitClient.getInstance().getAPI().ChangePassword(Account.account.getID(), oldPassword.getText().toString(), newPassword.getText().toString());
             call.enqueue(new Callback<Boolean>() {
                 @Override
                 public void onResponse(Call<Boolean> call, Response<Boolean> response)

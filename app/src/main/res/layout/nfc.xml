@@ -8,7 +8,7 @@
     android:background="@drawable/nfc">
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/txtAmount"
         android:layout_width="220dp"
         android:layout_height="43dp"
         android:layout_marginEnd="39dp"
@@ -19,8 +19,8 @@
         android:background="@drawable/whitebtn"
         android:ems="10"
         android:gravity="center"
-        android:hint="First Name"
-        android:inputType="textPersonName"
+        android:hint="00.00"
+        android:inputType="numberDecimal"
         android:padding="8dp"
         android:textColorHint="@color/colorAccent"
         android:textStyle="bold"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCorfirm"
         android:layout_width="127dp"
         android:layout_height="34dp"
         android:layout_marginLeft="27dp"
@@ -61,10 +61,10 @@
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/lblEnterpriseName" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnCancel"
         android:layout_width="127dp"
         android:layout_height="34dp"
         android:layout_marginEnd="26dp"
@@ -78,8 +78,8 @@
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintStart_toEndOf="@+id/btnCorfirm"
+        app:layout_constraintTop_toBottomOf="@+id/lblEnterpriseName" />
 
     <ImageView
         android:id="@+id/btnBack"
@@ -94,7 +94,7 @@
         app:srcCompat="@drawable/menu" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/lblEnterpriseName"
         android:layout_width="235dp"
         android:layout_height="34dp"
         android:layout_marginEnd="46dp"
@@ -103,10 +103,10 @@
         android:layout_marginStart="47dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Seller: ATZ Store"
+        android:text="Name of Enterprise"
         android:textColor="@color/DarkGray"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAmount" />
 </android.support.constraint.ConstraintLayout>

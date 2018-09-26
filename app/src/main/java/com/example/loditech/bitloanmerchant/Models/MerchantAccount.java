@@ -5,26 +5,30 @@ import com.google.gson.annotations.SerializedName;
 
 public class MerchantAccount extends Account
 {
-    @SerializedName("MerchantID")
-    @Expose
     public int MerchantID;
-    @SerializedName("AccountID")
-    @Expose
+
     public int AccountID;
-    @SerializedName("EnterpriseName")
-    @Expose
+
     public String EnterpriseName;
-    @SerializedName("EnterpriseAddress")
-    @Expose
+
     public String EnterpriseAddress;
-    @SerializedName("EnterpriseDescription")
-    @Expose
+
     public String EnterpriseDescription;
 
-    public static MerchantAccount account;
+    public static MerchantAccount merchantAccount;
 
-    public MerchantAccount(int merchantID, int accountID, String enterpriseName, String enterpriseAddress, String enterpriseDescription)
+    /*public MerchantAccount(int merchantID, int accountID, String enterpriseName, String enterpriseAddress, String enterpriseDescription)
     {
+        MerchantID = merchantID;
+        AccountID = accountID;
+        EnterpriseName = enterpriseName;
+        EnterpriseAddress = enterpriseAddress;
+        EnterpriseDescription = enterpriseDescription;
+    }*/
+
+    public MerchantAccount(int ID, String username, String password, String firstName, String middleName, String lastName, String emailAddress, String address, String role, int merchantID, int accountID, String enterpriseName, String enterpriseAddress, String enterpriseDescription)
+    {
+        super(ID, username, password, firstName, middleName, lastName, emailAddress, address, role);
         MerchantID = merchantID;
         AccountID = accountID;
         EnterpriseName = enterpriseName;

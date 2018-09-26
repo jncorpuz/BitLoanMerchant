@@ -8,7 +8,7 @@
     android:background="@drawable/settings_c">
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/txtBalance"
         android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="87dp"
@@ -40,7 +40,7 @@
         app:srcCompat="@drawable/menu" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/btnNextPage"
         android:layout_width="127dp"
         android:layout_height="34dp"
         android:layout_marginBottom="58dp"
@@ -50,18 +50,18 @@
         android:layout_marginStart="29dp"
         android:layout_marginTop="33dp"
         android:background="@drawable/yesbtn"
+        android:onClick="NextPage_onClick"
         android:text="Next Page"
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
-        android:onClick="NextPage_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText21" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCity" />
 
     <Button
-        android:id="@+id/button18"
+        android:id="@+id/btnCancel"
         android:layout_width="127dp"
         android:layout_height="34dp"
         android:layout_marginBottom="58dp"
@@ -76,10 +76,10 @@
         android:onClick="Cancel_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText22" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProvince" />
 
     <EditText
-        android:id="@+id/editText22"
+        android:id="@+id/txtProvince"
         android:layout_width="130dp"
         android:layout_height="43dp"
         android:layout_marginEnd="29dp"
@@ -94,11 +94,11 @@
         android:padding="8dp"
         android:textColorHint="#728aa5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText21"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintStart_toEndOf="@+id/txtCity"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnterpriseDescription" />
 
     <EditText
-        android:id="@+id/editText21"
+        android:id="@+id/txtCity"
         android:layout_width="130dp"
         android:layout_height="43dp"
         android:layout_marginEnd="10dp"
@@ -112,12 +112,12 @@
         android:inputType="text"
         android:padding="8dp"
         android:textColorHint="#728aa5"
-        app:layout_constraintEnd_toStartOf="@+id/editText22"
+        app:layout_constraintEnd_toStartOf="@+id/txtProvince"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText18" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEnterpriseDescription" />
 
     <EditText
-        android:id="@+id/editText20"
+        android:id="@+id/txtLastName"
         android:layout_width="130dp"
         android:layout_height="43dp"
         android:layout_marginEnd="29dp"
@@ -132,11 +132,11 @@
         android:padding="8dp"
         android:textColorHint="#728aa5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText19"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
+        app:layout_constraintStart_toEndOf="@+id/txtEnterpriseAddress"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnterpriseName" />
 
     <EditText
-        android:id="@+id/editText19"
+        android:id="@+id/txtEnterpriseAddress"
         android:layout_width="130dp"
         android:layout_height="43dp"
         android:layout_marginEnd="10dp"
@@ -150,12 +150,12 @@
         android:inputType="textPersonName"
         android:padding="8dp"
         android:textColorHint="#728aa5"
-        app:layout_constraintEnd_toStartOf="@+id/editText20"
+        app:layout_constraintEnd_toStartOf="@+id/txtLastName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText17" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEnterpriseName" />
 
     <EditText
-        android:id="@+id/editText17"
+        android:id="@+id/txtEnterpriseName"
         android:layout_width="270dp"
         android:layout_height="43dp"
         android:layout_marginEnd="29dp"
@@ -171,10 +171,10 @@
         android:textColorHint="#728aa5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBalance" />
 
     <EditText
-        android:id="@+id/editText18"
+        android:id="@+id/txtEnterpriseDescription"
         android:layout_width="270dp"
         android:layout_height="43dp"
         android:layout_marginEnd="29dp"
@@ -190,6 +190,6 @@
         android:textColorHint="#728aa5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText20" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
 
 </android.support.constraint.ConstraintLayout>

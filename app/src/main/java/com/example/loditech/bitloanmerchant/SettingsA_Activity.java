@@ -9,7 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.loditech.bitloanmerchant.Data.RetrofitClient;
-import com.example.loditech.bitloanmerchant.Models.MerchantAccount;
+import com.example.loditech.bitloanmerchant.Models.Account;
+import com.example.loditech.bitloanmerchant.Models.Wallet;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -29,13 +30,14 @@ public class SettingsA_Activity extends AppCompatActivity
         email = (EditText) findViewById(R.id.txtEmail);
         password = (EditText) findViewById(R.id.txtPassword);
         balance = (TextView) findViewById(R.id.lblBalance);
+        balance.setText(Double.toString(Wallet.wallet.getAmount()));
     }
 
     public void UpdateA_onClick(View v)
     {
         if(Check())
         {
-            Call<Boolean> call = RetrofitClient.getInstance().getAPI().ChangeEmail(MerchantAccount.account.getAccountID(), password.getText().toString(), email.getText().toString());
+            Call<Boolean> call = RetrofitClient.getInstance().getAPI().ChangeEmail(Account.account.getID(), password.getText().toString(), email.getText().toString());
             call.enqueue(new Callback<Boolean>() {
                 @Override
                 public void onResponse(Call<Boolean> call, Response<Boolean> response)
@@ -47,6 +49,9 @@ public class SettingsA_Activity extends AppCompatActivity
                             Toast.makeText(SettingsA_Activity.this, "Email Changed.", Toast.LENGTH_LONG).show();
                             email.getText().clear();
                             password.getText().clear();
+
+                            Intent intent = new Intent(SettingsA_Activity.this, SettingsMenuActivity.class);
+                            startActivity(intent);
                         }
                         else
                         {
@@ -57,9 +62,6 @@ public class SettingsA_Activity extends AppCompatActivity
                     {
                         Toast.makeText(SettingsA_Activity.this, e.toString(), Toast.LENGTH_LONG).show();
                     }
-
-                    Intent intent = new Intent(SettingsA_Activity.this, SettingsMenuActivity.class);
-                    startActivity(intent);
                 }
 
                 @Override
