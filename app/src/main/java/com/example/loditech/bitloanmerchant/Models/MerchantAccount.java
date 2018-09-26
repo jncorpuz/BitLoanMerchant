@@ -21,6 +21,8 @@ public class MerchantAccount extends Account
     @Expose
     public String EnterpriseDescription;
 
+    public static MerchantAccount account;
+
     public MerchantAccount(int merchantID, int accountID, String enterpriseName, String enterpriseAddress, String enterpriseDescription)
     {
         MerchantID = merchantID;
