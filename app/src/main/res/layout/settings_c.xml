@@ -54,6 +54,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
+        android:onClick="NextPage_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button18"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,6 +73,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
+        android:onClick="Cancel_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText22" />

@@ -1,7 +1,9 @@
 package com.example.loditech.bitloanmerchant;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class SettingsB_Activity extends AppCompatActivity
 {
@@ -10,5 +12,16 @@ public class SettingsB_Activity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_b);
+    }
+
+    public void Update_onClick(View v)
+    {
+
+    }
+
+    public void Cancel_onClick(View v)
+    {
+        Intent intent = new Intent(SettingsB_Activity.this, SettingsMenuActivity.class);
+        startActivity(intent);
     }
 }

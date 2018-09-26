@@ -22,7 +22,7 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity
 {
     EditText username, password;
-    Button cmdLogin;
+    //Button cmdLogin;
     TextView txtSignup;
 
     @Override
@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity
 
         username = (EditText) findViewById(R.id.txtUsername);
         password = (EditText) findViewById(R.id.txtPassword);
-        cmdLogin = (Button) findViewById(R.id.cmdLogin);
+        //cmdLogin = (Button) findViewById(R.id.cmdLogin);
         txtSignup = (TextView) findViewById(R.id.txtSignUp);
     }
 

@@ -53,6 +53,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
+        android:onClick="Update_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button18"
         app:layout_constraintHorizontal_bias="1.0"
@@ -70,6 +71,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/background_light"
         android:textSize="15sp"
+        android:onClick="Cancel_onClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
