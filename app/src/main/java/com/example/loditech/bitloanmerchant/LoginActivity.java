@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,8 +11,6 @@ import android.widget.Toast;
 import com.example.loditech.bitloanmerchant.Data.RetrofitClient;
 import com.example.loditech.bitloanmerchant.Models.Account;
 import com.example.loditech.bitloanmerchant.Models.MerchantAccount;
-
-import org.w3c.dom.Text;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -31,9 +28,8 @@ public class LoginActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        username = (EditText) findViewById(R.id.txtUsername);
-        password = (EditText) findViewById(R.id.txtPassword);
-        //cmdLogin = (Button) findViewById(R.id.cmdLogin);
+        username = (EditText) findViewById(R.id.txtUsernameSU);
+        password = (EditText) findViewById(R.id.txtPasswordSU);
         txtSignup = (TextView) findViewById(R.id.txtSignUp);
     }
 
